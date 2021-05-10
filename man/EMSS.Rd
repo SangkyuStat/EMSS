@@ -4,8 +4,14 @@
 \alias{EMSS}
 \title{EM type Estimation Methods for the Heckman's Sample Selection Model}
 \usage{
-EMSS(response, selection, data, method = "ECM", initial.param = NULL,
-  eps = 10^(-10))
+EMSS(
+  response,
+  selection,
+  data,
+  method = "ECM",
+  initial.param = NULL,
+  eps = 10^(-10)
+)
 }
 \arguments{
 \item{response}{a formula for the response equation.}
@@ -49,7 +55,7 @@ Maximization with Newton-Raphson, and \code{"ECME"} for Expectation/Conditional 
 \details{
 The dependent variable of the selection equation (specified by argument selection) must have exactly
 two levels (e.g., 'FALSE' and 'TRUE', or '0' and '1'). The default argument method is "ECM" and the
-default start values ("NULL") are obtained by two-step estimation of this model through the commend
+default start values ("NULL") are obtained by two-step estimation of this model through the command
 \code{selection} from the package \code{sampleSelection}. NA's are allowed in the data. These are
 ignored if the corresponding outcome is unobserved, otherwise observations which contain NA
 (either in selection or outcome) are changed to 0.
