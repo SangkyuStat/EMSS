@@ -126,7 +126,7 @@ EMSS <- function(response, selection, data, method="ECM",
     w <- w[complete,]
     y1 <- y1[complete]
     y2 <- y2[complete]
-    message("Warning: There is NA in the observed characters of the response data or the selection data.")
+    warning("The response data or the selection data is not complete, the missing observations are ignored.")
   }
   
   x.name <- names(as.data.frame(x))
