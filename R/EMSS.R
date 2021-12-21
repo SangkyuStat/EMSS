@@ -39,7 +39,7 @@
 #' \item{names_selection}{names of regression coefficients for the selection formula.}
 #' @importFrom mvtnorm rmvnorm
 #' @importFrom sampleSelection selection
-#' @importFrom stats dnorm model.matrix model.response na.pass pnorm qchisq qnorm symnum
+#' @importFrom stats dnorm model.matrix model.response na.pass pnorm qchisq qnorm symnum complete.cases
 #' @examples
 #' data(Smoke, package = "EMSS")
 #' ex1 <- EMSS(response = cigs_intervals ~ educ,
