@@ -124,6 +124,8 @@ EMSS <- function(response, selection, data, method="ECM",
   if(sum(!complete) > 0){
     x <- x[complete,]
     w <- w[complete,]
+    y1 <- y1[complete]
+    y2 <- y2[complete]
     message("Warning: There is NA in the observed characters of the response data or the selection data.")
   }
   
