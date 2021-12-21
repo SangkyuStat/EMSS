@@ -14,4 +14,5 @@ Imports: sampleSelection, mvtnorm
 BugReports: https://github.com/SangkyuStat/EMSS/issues
 URL: https://github.com/SangkyuStat/EMSS
 Suggests: 
-    testthat
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
