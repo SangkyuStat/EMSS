@@ -118,9 +118,15 @@ EMSS <- function(response, selection, data, method="ECM",
 
   x <- model.matrix(mt1, mf1, contrasts.arg = NULL, xlev = NULL)
   w <- model.matrix(mt2, mf2, contrasts.arg = NULL, xlev = NULL)
-  if(any(is.na(x)==TRUE)){
-    message("Warning: There is NA data in the observed characters of the response data.")
+  
+  complete <- complete.cases(x) & complete.cases(w)
+  
+  if(sum(!complete) > 0){
+    x <- x[complete,]
+    w <- w[complete,]
+    message("Warning: There is NA in the observed characters of the response data or the selection data.")
   }
+  
   x.name <- names(as.data.frame(x))
   w.name <- names(as.data.frame(w))
 
